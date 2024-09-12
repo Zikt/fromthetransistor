@@ -1,5 +1,31 @@
 # From the Transistor to the Web Browser
 
+## Table of Contents
+
+* [Section 1: Intro](#section-1-intro)
+	+ [Overview](#overview)
+	+ [Emulation](#emulation)
+* [Section 2: Bringup](#section-2-bringup)
+	+ [Building a UART](#building-a-uart)
+	+ [Building a simple CPU](#building-a-simple-cpu)
+* [Section 3: Processor](#section-3-processor)
+	+ [Coding an Assembler](#coding-an-assembler)
+	+ [Building an ARM7 CPU](#building-an-arm7-cpu)
+	+ [Coding a BootROM](#coding-a-bootrom)
+* [Section 4: Compiler](#section-4-compiler)
+	+ [Building a C Compiler](#building-a-c-compiler)
+	+ [Building a Linker](#building-a-linker)
+* [Section 5: Operating System](#section-5-operating-system)
+	+ [Building an MMU](#building-an-mmu)
+	+ [Building an Operating System](#building-an-operating-system)
+	+ [Building an Ethernet Controller](#building-an-ethernet-controller)
+* [Section 6: Browser](#section-6-browser)
+	+ [Building a TCP Stack](#building-a-tcp-stack)
+	+ [Writing a Web Browser](#writing-a-web-browser)
+* [Section 7: Physical](#section-7-physical)
+	+ [Talking to an FPGA](#talking-to-an-fpga)
+	+ [Building an FPGA Board](#building-an-fpga-board)
+
 ## Introduction
 This course is designed to guide learners through the modern computer stack, from the fundamental workings of transistors to the creation of a fully functional web browser. The course will take learners through various aspects of hardware and software development, including FPGAs, assembly programming, compilers, operating systems, and network protocols. 
 
@@ -10,22 +36,47 @@ This course will be open source and community-maintained, providing opportunitie
 
 ## Course Outline
 
+To get to this section from the table of contents, click on [Section 1: Intro](#section-1-intro).
+
+#section-1-intro
 ### **Section 1: Intro: Cheating our way past the transistor (0.5 weeks)**
+
+#section-1-intro
+
 1. **Overview:**
    - Learn how FPGAs are built using transistors and the importance of LUTs.
-   - **Reading:**
-     - "Digital Design and Computer Architecture" by David Harris and Sarah Harris
-     - "The Art of Electronics" by Paul Horowitz and Winfield Hill (Transistor theory basics)
+   1) Read - [What is a field programmable gate array (FPGA)? IBM](https://www.ibm.com/think/topics/field-programmable-gate-arrays)
+   2) Read [How Does an FPGA Work? Sparkfun](https://learn.sparkfun.com/tutorials/how-does-an-fpga-work/all)
+    -- Note that FPGAs are built using transistors
+   
+   - **Books:**
+     - "Digital Design and Computer Architecture" by David Harris and Sarah Harris Download PDF - [Harris and Harris, 2015](https://dl.acm.org/citation.cfm?id=2815529)
+     - "The Art of Electronics" by Paul Horowitz and Winfield Hill (Transistor theory basics) [Download PDF](https://eclass.uniwa.gr/modules/document/index.php?course=EEE265&download=/6218412aGLbn/5e6db8cd5KNP.pdf)
+
    - **Videos:**
-     - [Transistor Basics](https://www.youtube.com/watch?v=sFqZnl8tzWk)
-     - [How FPGAs Work](https://www.youtube.com/watch?v=5XITahTkXoY)
+
+     1) Video ~ 15 mins - [The "Do Anything" Chip: FPGA](https://youtu.be/ePwo3P1iZO4?si=L7tms5RA4i1OZb97)
+     2) Video ~ 50 mins - [An Introduction to FPGAs: Architecture, Programmability and Advantageous](https://youtu.be/ahws--oNpBc?si=68vt3uYkdLLEkdC8) 
+
    - **Code Sample:** Basic Verilog project (Blinking LED using FPGA)
 
 2. **Emulation with Verilator:**
+
+    Building on real hardware limits the reach of this course. Using something like Verilator will allow anyone with a computer to play.
+
    - **Reading:**
-     - Verilator documentation and example codes
+
+    0) Quick-dive 30 slides [Verilator: Open Simulation - Growing Up](https://www.veripool.org/papers/Verilator_Open_Simulation_DVClub13_pres.pdf)
+    1) [Verilator documentation and example codes for ref](https://verilator.org/guide/latest/index.html#)
+        Welcome to Verilator, the fastest Verilog/SystemVerilog simulator. Verilator open-source SystemVerilog simulator and lint system
+    2) [Taking a New Look at Verilator](https://zipcpu.com/blog/2017/06/21/looking-at-verilator.html)
+
+    3) Practical - [Verilator Pt.1: Introduction](https://itsembedded.com/dhd/verilator_1/) -- Complete your first simulation with verilator!
+
+
    - **Videos:**
      - [How to use Verilator](https://www.youtube.com/watch?v=e_MwgFQEUgY)
+
    - **Code Sample:** Installing and setting up Verilator for FPGA emulation
 
 ---
