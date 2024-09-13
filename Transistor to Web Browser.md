@@ -71,11 +71,16 @@ To get to this section from the table of contents, click on [Section 1: Intro](#
         Welcome to Verilator, the fastest Verilog/SystemVerilog simulator. Verilator open-source SystemVerilog simulator and lint system
     2) [Taking a New Look at Verilator](https://zipcpu.com/blog/2017/06/21/looking-at-verilator.html)
 
+    3) [Veripool](https://veripool.org/) --
+    Veripool contains publicly licensed open source software related to SystemVerilog and SystemC design and verification, and all are open-sourced! These tools have over 10,000 users worldwide, including most major chip design and IP companies in the industry.
+
+    4) [Verilator Getting-Started Guide ](https://github.com/sifferman/verilator_example)
+
     3) Practical - [Verilator Pt.1: Introduction](https://itsembedded.com/dhd/verilator_1/) -- Complete your first simulation with verilator!
 
-
    - **Videos:**
-     - [How to use Verilator](https://www.youtube.com/watch?v=e_MwgFQEUgY)
+     - How to use Verilator - [VERILATOR Introduction
+](https://youtu.be/ALuaCai1W_0?si=BA332AVIt6G0Rl4F)
 
    - **Code Sample:** Installing and setting up Verilator for FPGA emulation
 
